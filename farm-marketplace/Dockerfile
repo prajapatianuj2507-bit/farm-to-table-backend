@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
@@ -10,4 +10,4 @@ RUN mvn clean package
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["sh", "-c", "java -jar target/*.jar"]
